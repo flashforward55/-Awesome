@@ -1,0 +1,88 @@
+.container {
+    @extend %container;
+}
+
+.features {
+    @extend %section;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+        &::before {
+                position: absolute;
+                z-index: -1;
+                bottom: 24px;
+                right: 0;
+                width: 600px;
+                height: 160px;
+                background-image: url(../images/dcr_bcg.png);
+                transform: rotate(180deg);
+                content: '';
+            }
+    }
+    
+    
+        &::after {
+            position: absolute;
+            z-index: -1;
+            bottom: 24px;
+            left: 0;
+            width: 224px;
+            height: 224px;
+            background-image: url('../images/decordots.png');
+            transform: rotate(180deg);
+            content: '';
+        }
+    
+        &__list {
+            @media screen and (min-width: 768px) {
+                display: flex;
+                    gap: 44px;
+                    flex-wrap: wrap;
+            }
+        }
+    
+        &__item {
+            margin-bottom: 32px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+           @media screen and (min-width: 768px) {
+            flex-basis: calc((100% - 88px) / 3);
+           }
+        }
+    
+    
+    
+        &__card {
+            padding: 64px 50px 60px;
+            fill: $colorBrand;
+            background: linear-gradient(358.27deg, rgba(100, 123, 100, 0.77) -118.86%,
+                        rgba(100, 123, 100, 0) 25.62%, rgba(100, 123, 100, 0) 98.53%), #FFFFFF;
+            border-radius: 8px;
+    
+            .features__item:nth-child(even) & {
+                color: $colorInvert;
+                fill: $colorInvert;
+                background-color: $colorBrand;
+            }
+        }
+    
+        &__icon {
+            margin-bottom: 32px;
+        }
+    
+        &__title {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 1.5;
+            font-variant: small-caps;
+    
+            &--uppercase {
+                text-transform: uppercase;
+            }
+        }
+}
+
+
+

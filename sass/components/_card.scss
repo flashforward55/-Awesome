@@ -1,0 +1,83 @@
+.card-section {
+    @media screen and (min-width: 768px) {
+width: 600px;
+    display: flex;
+    }
+    
+
+    &__container {
+        @media screen and (min-width: 768px) {
+            display: flex;
+                flex-wrap: wrap;
+        }  
+        }
+
+        &__element {
+            width: 372px;
+            height: 238px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+
+            &:hover {
+                background-color: $colorInvert;
+            }
+
+            @media screen and (min-width: 768px) {
+                width: 288px;
+                margin-right: 20px;
+&:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 2) {
+        margin-bottom: 0;
+    }
+            }
+        }
+
+        &__card {
+            padding: 32px 40px;
+            border-radius: 8px;
+            margin-bottom: 32px;
+        }
+
+        &__thumb {
+            @include centeredFlex($type: flex);
+            margin-bottom: 16px;
+            width: 48px;
+            height: 48px;
+            background-color: $colorInvert;
+            border-radius: 8px;
+
+            .card-section__element:hover & {
+                background-color: $colorBrand;
+            }
+        }
+
+        &__icon {
+            fill: $colorBrand;
+
+            .card-section__element:hover & {
+                fill: $colorInvert;
+            }
+        }
+
+        &__title {
+            margin-bottom: 8px;
+
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 1.5;
+            font-variant: small-caps;
+        }
+
+        &__text {
+            margin-bottom: 0;
+
+            font-size: 14px;
+            line-height: 1.571;
+        }
+}
+
+
+

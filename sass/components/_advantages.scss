@@ -1,0 +1,39 @@
+.section__container {
+    @extend %container;
+
+    @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    }   
+}
+
+.advantages__container {
+    width: 100%;
+    padding-bottom: 48px;
+    
+    @media screen and (min-width: 768px) {
+        width: 440px;
+    }
+}
+
+.advantages {
+    @extend %section;
+    position: relative;
+
+    &::before {
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            top: 16px;
+            width: 396px;
+            height: 160px;
+            background-image: url(../images/decor_bcg.png);
+            content: '';
+
+            @media screen and (min-width: 768px) {
+                top: 24px;
+                width: 600px;
+            }
+        }
+}
+

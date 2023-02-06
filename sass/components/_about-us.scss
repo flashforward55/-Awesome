@@ -1,0 +1,60 @@
+.about-us {
+    padding-top: 48px;
+    padding-bottom: 48px;
+   
+    @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    &__thumb {
+        padding-bottom: 48px;
+        display: flex;
+        position: relative;
+
+        &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                z-index: -999;
+                top: 16px;
+                left: 16px;
+                width: 360px;
+                height: 334px;
+                background: linear-gradient(197.92deg, rgba(239, 128, 49, 0) -227.37%,
+                        rgba(239, 128, 49, 0.15) 1.58%,
+                        rgba(239, 128, 49, 0) 103.02%);
+            }
+
+            @media screen and (min-width: 768px) {
+                &::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        z-index: -999;
+                        top: 40px;
+                        left: 40px;
+                        width: 570px;
+                        height: 530px;
+                        background-image: url(/images/desktop/aboutusback-desk.png);
+                    }
+            }
+    }
+
+    &__img {
+        height: 334px;
+        
+
+        
+
+        @media screen and (min-width: 768px) {
+            height: 530px;
+           
+
+            
+        
+            
+        }
+    }
+}

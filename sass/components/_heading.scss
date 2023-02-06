@@ -1,0 +1,25 @@
+.heading-title {
+    margin: 0 0 8px;
+    color: $colorheadingTitle;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.333;
+    text-transform: uppercase;
+}
+
+.heading-subtitle {
+    margin: 0 0 40px;
+    color: $colorheadingSubtitle;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.333;
+    text-transform: uppercase;
+}
+
+.heading-thumb {
+    max-width: 454px;
+}
+
+.heading-text {
+    margin-bottom: 40px;
+}
